@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miikistore - Inventario</title>
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/inventario.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+        <header class="header">
+            <div class="header-content">
+                <h1>Miikistore</h1>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="inventario.html">Inventario</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    
+        <main>
+            <h1>Inventario de Productos</h1>
+                <div class="filtros">
+                <button class="filtro activo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="paletas">Paletas</button>
+                <button class="filtro" data-categoria="esmaltes">Esmaltes</button>
+                <button class="filtro" data-categoria="labiales">Labiales</button>
+                <button class="filtro" data-categoria="bases">Bases</button>
+            </div>
+    
+            <div class="productos">
+                <!-- Paletas -->
+                <div class="producto paletas">
+                    <img src="img/paleta1.jpg" alt="Paleta 1">
+                    <p>Paleta de Sombras - Colores cálidos</p>
+                </div>
+                <div class="producto paletas">
+                    <img src="img/paleta2.jpg" alt="Paleta 2">
+                    <p>Paleta de Sombras - Neon</p>
+                </div>
+                
+                <!-- Esmaltes -->
+                <div class="producto esmaltes">
+                    <img src="img/esmalte1.jpg" alt="Esmalte 1">
+                    <p>Esmalte Rojo Intenso</p>
+                </div>
+                <div class="producto esmaltes">
+                    <img src="img/esmalte2.jpg" alt="Esmalte 2">
+                    <p>Esmalte Rosa Pastel</p>
+                </div>
+                
+                <!-- labiales -->
+                <div class="producto labiales">
+                    <img src="img/labial1.jpg" alt="Labial 1">
+                    <p>Labial Mate - Rojo pasión</p>
+                </div>
+                <div class="producto labiales">
+                    <img src="img/labial2.jpg" alt="Labial 2">
+                    <p>Labial Brillante - Nude</p>
+                </div>
+                
+                <!-- Bases -->
+                <div class="producto bases">
+                    <img src="img/base1.jpg" alt="Base 1">
+                    <p>Base Líquida - Tono claro</p>
+                </div>
+                <div class="producto bases">
+                    <img src="img/base2.jpg" alt="Base 2">
+                    <p>Base en Polvo - Tono medio</p>
+                </div>
+            </div>
+        </main>
+    
+        <footer>
+            <p>&copy; 2025 Miikistore. Todos los derechos reservados.</p>
+        </footer>
+    
+        <script src="js/inventario.js"></script>
+    </body>
+    </html>
+    

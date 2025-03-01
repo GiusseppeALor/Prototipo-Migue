@@ -1,0 +1,178 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+/* header */
+
+.header {
+    background: linear-gradient(135deg, #0e7280, #4bdcef);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+    border-bottom: 5px solid #00e1ff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 10px 0 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.1);
+}
+
+/* Sobre Nosotros */
+
+.sobre-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-nosotros img {
+    width: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.texto-nosotros {
+    flex: 1;
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+.presentacion h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0e7280;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .sobre-nosotros {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre-nosotros img {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+
+/* Carrusel de imágenes */
+.carousel {
+    max-width: 400px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+/* contactanos */
+.contacto {
+    text-align: center;
+    padding: 40px 20px;
+    background: #ffffff;
+    border-top: 5px solid #ffffff;
+}
+
+.contacto h2 {
+    font-size: 2rem;
+    color: #0e7280;
+    margin-bottom: 10px;
+}
+
+.contacto p {
+    font-size: 1.2rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.btn-contacto {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: white;
+    background: #25d366;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-contacto:hover {
+    background: #1ebe5d;
+    transform: scale(1.1);
+}
+
+
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background: #0e7280;
+    color: white;
+}
