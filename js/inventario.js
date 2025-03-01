@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     filtros.forEach(filtro => {
         filtro.addEventListener("click", () => {
-            // Remueve la clase 'activo' del botón anterior y la agrega al botón seleccionado
             document.querySelector(".filtro.activo").classList.remove("activo");
             filtro.classList.add("activo");
 
@@ -12,12 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
             productos.forEach(producto => {
                 if (categoria === "todos") {
-                    producto.style.display = "block"; // Muestra todos los productos
+                    producto.style.display = "block"; 
                 } else {
                     if (producto.classList.contains(categoria)) {
-                        producto.style.display = "block"; // Muestra solo los de la categoría
+                        producto.style.display = "block"; 
                     } else {
-                        producto.style.display = "none"; // Oculta los demás
+                        producto.style.display = "none"; 
                     }
                 }
             });
