@@ -31,34 +31,223 @@ body {
     margin: 10px 0 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 20px 0 0;
+/* Estilos base del navbar */
+.navbar {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    padding: 20px 50px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: all 0.3s ease;
+    z-index: 1000;
 }
 
-nav ul li {
-    display: inline;
+/* Encoge el navbar al hacer scroll */
+.navbar.shrink {
+    padding: 10px 50px;
+    background: #000;
 }
 
-nav ul li a {
+/* Logo */
+.logo img {
+    height: 60px;
+    transition: height 0.3s ease;
+}
+
+.navbar.shrink .logo img {
+    height: 45px;
+}
+
+/* Estilos de los links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 1.1rem;
-    padding: 10px 20px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    transition: all 0.3s ease-in-out;
+    position: relative;
 }
 
-nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.4);
-    transform: scale(1.1);
+/* Subrayado al hacer hover */
+.nav-links li a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: gold;
+    transition: width 0.3s;
 }
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+    width: 100%;
+}
+
+/* Íconos */
+.icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icons a {
+    color: white;
+    font-size: 20px;
+}
+
+/* Carrito con número */
+.cart-badge {
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: relative;
+    top: -10px;
+    left: -5px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    .icons {
+        margin-top: 10px;
+    }
+}
+
+/* Estilo del Hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ajusta según lo que necesites */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Video de fondo */
+.hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Overlay oscuro para mejorar la visibilidad del texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad si es necesario */
+    z-index: 0;
+}
+
+/* Contenido del Hero */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-family: "Poppins", cursive;
+}
+
+.btn-hero {
+    display: inline-block;
+    margin-top: 15px;
+    background: rgb(255, 255, 255);
+    color: black;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-hero:hover {
+    background: #796832;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+
+    .btn-hero {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-video {
+        max-width: 250px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero-logo {
+        max-width: 250px;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+}
+
 
 /* Sobre Nosotros */
 
@@ -169,9 +358,56 @@ nav ul li a:hover {
 
 
 /* Footer */
-footer {
-    margin-top: 20px;
-    padding: 10px;
-    background: #0e7280;
+.footer {
+    background: #222;
     color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+    gap: 20px;
+}
+
+.footer-logo h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #7ec7d5;
+}
+
+.footer-social h3, .footer-contacto h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #7ec7d5;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre íconos */
+}
+
+.social-icons a img {
+    width: 100px; /* Aumenta el tamaño */
+    height: 100px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.social-icons a img:hover {
+    transform: scale(1.3); /* Crece al 130% */
+    filter: brightness(1.2); /* Se ilumina un poco */
+}
+
+
+.footer-bottom {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    font-size: 14px;
 }

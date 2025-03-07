@@ -10,19 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <h1>Miikistore</h1>
-            <p>Somos Miikistore, distribuidora de diferentes tipos de cosméticos de alta calidad.</p>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="img/Logo.jpg" alt="Miikistore">
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="inventario.html">Inventario</a></li>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="contacto.html">COMUNÍCATE CON NOSOTROS</a></li>
+                <li><a href="inventario.html">TIENDA</a></li>
             </ul>
         </nav>
+        <div class="icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-badge">1</span></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
     </header>
     
+    <br><br><br><br>
+
+    <section class="hero">
+        <video autoplay loop muted class="hero-video">
+            <source src="video/video.mp4" type="video/mp4">
+            Tu navegador no soporta videos.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Bienestar en cada detalle</h2>
+            <a href="inventario.html" class="btn-hero">COMPRAR AHORA</a>
+        </div>
+    </section>
+    
+    
+    
+
     <section class="presentacion">
         <h2>Sobre Nosotros</h2>
         <div class="sobre-nosotros">
@@ -30,13 +52,13 @@
             <div class="texto-nosotros">
                 <p>En Miikistore nos especializamos en ofrecer productos cosméticos de la mejor calidad. Nuestra misión es realzar tu belleza con productos confiables y accesibles.</p>
                 <p>Ofrecemos una amplia gama de productos como paletas de sombras, esmaltes, labiales, bases y más.</p>
-                <p>Con años de experiencia en la industria, trabajamos con las mejores marcas para asegurarnos de que cada producto que llega a ti sea seguro, efectivo y a la moda.</p>
+                <p>Con años de experiencia en la industria, trabajamos para asegurarnos de que cada producto que llega a ti sea seguro, efectivo y a la moda.</p>
             </div>
         </div>
     </section>
 
     <section class="productos">
-        <h1>Nuestros Productos</h1>
+        <h1>Nuestros Productos Mas Destacados</h1>
         <div class="carousel">
             <div class="carousel-container">
                 <img src="img/paleta.png" alt="Cosmético 1">
@@ -52,11 +74,38 @@
         <a href="tel:933867881" class="btn-contacto" target="_blank">Enviar Mensaje por WhatsApp</a>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Miikistore. Todos los derechos reservados.</p>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Miikistore</h2>
+                <p>Distribuidora de cosméticos de alta calidad</p>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Síguenos en redes</h3>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100063507943388&mibextid=ZbWKwL" target="_blank"><img src="img/Face.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"><img src="img/Insta.png" alt="Instagram"></a>
+                    <a href="https://wa.me/933867881" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+    
+            <div class="footer-contacto">
+                <h3>Contáctanos</h3>
+                <p>Email: contacto@miikistore.com</p>
+                <p>Teléfono: +51 933 867 881</p>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Miikistore. Todos los derechos reservados.</p>
+        </div>
     </footer>
     
+    
     <script src="js/script.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+    <script src="js/navbar.js"></script>
 </body>
 </html>
 

@@ -11,17 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-        <header class="header">
-            <div class="header-content">
-                <h1>Miikistore</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="inventario.html">Inventario</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <header class="navbar" id="navbar">
+        <div class="logo">
+            <img src="img/Logo.jpg" alt="Miikistore">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">INICIO</a></li>
+                <li><a href="contacto.html">COMUNÍCATE CON NOSOTROS</a></li>
+                <li><a href="inventario.html">TIENDA</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <a href="#"><i class="fas fa-search"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart"></i><span class="cart-badge">1</span></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+        </div>
+    </header>
     
         <main>
             <h1>Inventario de Productos</h1>
@@ -76,9 +82,34 @@
             </div>
         </main>
     
-        <footer>
-            <p>&copy; 2025 Miikistore. Todos los derechos reservados.</p>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Miikistore</h2>
+                    <p>Distribuidora de cosméticos de alta calidad.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <h3>Síguenos en redes</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+                        <a href="https://wa.me/1234567890" target="_blank"><img src="img/whatsapp.png" alt="WhatsApp"></a>
+                    </div>
+                </div>
+        
+                <div class="footer-contacto">
+                    <h3>Contáctanos</h3>
+                    <p>Email: contacto@miikistore.com</p>
+                    <p>Teléfono: +51 987 654 321</p>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2025 Miikistore. Todos los derechos reservados.</p>
+            </div>
         </footer>
+        
     
         <script src="js/inventario.js"></script>
     </body>
